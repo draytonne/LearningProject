@@ -51,19 +51,6 @@ fruits.forEach( function(item,index){
 });
 
 
-var things = [
-    ['Bread', 50,0.16],
-    ['Milk', 50,0.16],
-    ['Tomatoes', 60,0.16],
-    ['Water', 50,0.16],
-    ['Wine', 100,0.16]
-];
-console.table(things);
-
-document.table(things+"<br>");
-
-
-
 function power(x,n)
 {
 if (n==0)
