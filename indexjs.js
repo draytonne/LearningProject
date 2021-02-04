@@ -11,7 +11,7 @@ document.writeln("Good day," +name);
 }
 
 speak("Joe");
-*/
+
 const CalcArea = function(radius)
 {
     let Area =3.142* radius**2;
@@ -51,5 +51,45 @@ fruits.forEach( function(item,index){
 });
 
 
+var things = [
+    ['Bread', 50,0.16],
+    ['Milk', 50,0.16],
+    ['Tomatoes', 60,0.16],
+    ['Water', 50,0.16],
+    ['Wine', 100,0.16]
+];
+console.table(things);
+
+document.table(things+"<br>");
 
 
+
+function power(x,n)
+{
+if (n==0)
+return 1;
+else 
+return x* power(x,n-1);
+}
+
+document.write(power(2,0)+ "<br>"); 
+
+function Countdown(value){
+    if(value > 0){
+        document.write(value+ "<br>");
+        return Countdown(value-1);
+    }else
+     return value;
+}
+document.writeln("Count down " + "<br>");
+document.writeln(Countdown(10) + "<br>");
+
+*/
+function revstr(str)
+{
+    if (str=="")
+    return "No value was keyed in";
+    return revstr(str.substring(1) +str.charAt(0));
+}
+
+document.writeln(revstr('cat') +"<br>");

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Table</title>
+    <style>
+        table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+    
+        th, td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div class='container'></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+
+        const things = [
+        ['milk', 60,0.16],
+        ['bread', 75,0.16],
+        ['water', 89,0.16],
+         ['apples', 94,0.16],
+        ['tomatoes', 100,0.16],
+        ['Wine', 116,0.16]
+        ];
+
+        function getAge ( year, month, day ) {
+
+            return new Date().getFullYear() - new Date(year, month, day).getFullYear()
+        }
+
+        function itemTable ( items, price,tax ) {
+
+            const tableHead = `
+                <table>
+                    <thead>
+                        <tr class='highlight-row'>
+                            <th>item</th>
+                            <th>price</th>
+                            <th>tax</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            const tableFoot = `
+                    </tbody>
+                </table>
+            `;
+
+            const count = items.length;
+            let tableBody = '';
+
+            for ( let i = 0; i < count; i += 1 ) {
+
+                let curritem = items[i][0];
+                let currprice = items[i][1];
+                let currtax = items[i][2];
+               
+
+                tableBody += `
+                    <tr${highlight}>
+                        <td>${curritem}</td>
+                        <td>${currprice}</td>
+                        <td>${currtax}</td>
+                    </tr>
+                `
+            }
+
+            return tableHead + tableBody + tableFoot;
+        }
+
+        document.querySelector('.container')
+            .insertAdjacentHTML(
+                'afterbegin',
+                gradeTable( items, getPrice( 2011, 4, 28 ) )
+            )
+    })
+</script>
+</body>
+</html>
