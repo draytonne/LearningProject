@@ -58,7 +58,7 @@ return x* power(x,n-1);
 
 document.write(power(2,0)+ "<br>"); 
 
-const powerr = (x,n) =>n==0?1:x*powerr(x,n-1);
+const powerr = (x,n)=>n==0?1:x*powerr(x,n-1);
 document.write(powerr(2,3)+ "<br>");
 
 function Salute(name="John",time="Evening")
@@ -67,5 +67,19 @@ function Salute(name="John",time="Evening")
 }
 Salute("Karl","Morning");
 
-const speaks = (name="John",time="Evening")=> 'Good '  +time +" "+name +"<br>";
-document.writeln(speaks( 'Morning','Mary') +"<br>");
+const salutation = (name="John",time="Evening")=> `Good ${time} ${name}<br>`;
+document.writeln(salutation( 'Morning','Mary') +"<br>");
+
+function Countdown(value){
+    if(value > 0){
+        document.write(value+ "<br>");
+        return Countdown(value-1);
+    }else
+     return value;
+}
+document.writeln("Count down " + "<br>");
+document.writeln(Countdown(10) + "<br>");
+
+const Counta =(value)=>value<=0 ?1:document.writeln(value+"<br>");
+document.writeln(Counta("Count down "+ "<br>"));
+document.writeln(Counta(10)+ "<br>");
