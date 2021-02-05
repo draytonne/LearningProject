@@ -58,12 +58,14 @@ return x* power(x,n-1);
 
 document.write(power(2,0)+ "<br>"); 
 
-const powerr = (x,n) =>n==0 ?1:x*powerr(x,n-1);
+const powerr = (x,n) =>n==0?1:x*powerr(x,n-1);
 document.write(powerr(2,3)+ "<br>");
 
-var fruits=["Apples","Mangoes","Grapes","Oranges"];
+function Salute(name="John",time="Evening")
+{
+    document.write("Good " + time +" "+ name );
+}
+Salute("Karl","Morning");
 
-fruits.forEach( function(item,index){
-    document.writeln(index+1+" " +item +"<br>" );
-});
-
+const speaks = (name="John",time="Evening")=> 'Good '  +time +" "+name +"<br>";
+document.writeln(speaks( 'Morning','Mary') +"<br>");
