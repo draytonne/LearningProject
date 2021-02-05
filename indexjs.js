@@ -81,3 +81,18 @@ function revstr(str)
 }
 
 document.writeln(revstr('cat') +"<br>");
+
+function Countdown(value){
+    if(value < 1){
+       
+        return value;
+    }else
+    document.writeln(value+ "<br>");
+    return Countdown(value-1);
+    
+}
+document.writeln("Count down " + "<br>");
+document.writeln(Countdown(10) + "<br>");
+
+const CDown = value => value<1?document.writeln(value):CDown(value-1)+'';
+document.writeln(CDown(10)+ "<br>");

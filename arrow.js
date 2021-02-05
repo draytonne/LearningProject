@@ -1,4 +1,4 @@
-const speak = function(name){
+/*const speak = function(name){
     document.writeln('Good day,' +name);
     }
     
@@ -34,7 +34,7 @@ document.write(("The factorial of " + n + " is " + number)+"<br>");
 const factoriall = (n)=>n==0 ?1:n *factoriall(n-1);
 document.writeln("The factorial of "+ 6+ "=" +factoriall(6)+ "<br>");
 
-/*const bill = function(products,tax)
+const bill = function(products,tax)
 {
     let total = 0;
     for(let i=0 ;i< products.length; i++)
@@ -43,7 +43,7 @@ document.writeln("The factorial of "+ 6+ "=" +factoriall(6)+ "<br>");
     }
     return total;;
 }
-document.writeln(bill([10,80,56,89,45,30], 0.14),"<br>");*/
+document.writeln(bill([10,80,56,89,45,30], 0.14),"<br>");
 
 const billd = (products,tax) => products[i]+products[i]*tax;
 document.writeln("The total amount is " +billd([10,80,56,89,45,30],0.14) +"<br>");
@@ -85,4 +85,7 @@ document.writeln(Countdown(10) + "<br>");
 const Countdown1=(value) =>value > 0 ? document.writeln(value+' ' +Countdown1(value-1) +"<br>") :value;
    
 document.writeln("Count down " + "<br>");
-document.writeln(Countdown1(10) + "<br>");
+document.writeln(Countdown1(10) + "<br>");*/
+
+const Value = x => x>0 ?document.writeln("Red"): document.writeln("Blue"+"<br>");
+document.writeln(Value(3)+ "<br>");
