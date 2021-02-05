@@ -74,9 +74,10 @@ document.writeln(Countdown(10) + "<br>");
 */
 function revstr(str)
 {
-    if (str=="")
-    return "No value was keyed in";
-    return revstr(str.substring(1) +str.charAt(0));
+    if (str=='')
+    return '';
+    else 
+    return revstr(str.substr(1) +str.charAt(0));
 }
 
 document.writeln(revstr('cat') +"<br>");

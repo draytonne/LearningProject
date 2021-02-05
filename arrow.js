@@ -34,7 +34,7 @@ document.write(("The factorial of " + n + " is " + number)+"<br>");
 const factoriall = (n)=>n==0 ?1:n *factoriall(n-1);
 document.writeln("The factorial of "+ 6+ "=" +factoriall(6)+ "<br>");
 
-const bill = function(products,tax)
+/*const bill = function(products,tax)
 {
     let total = 0;
     for(let i=0 ;i< products.length; i++)
@@ -43,10 +43,10 @@ const bill = function(products,tax)
     }
     return total;;
 }
-document.writeln(bill([10,80,56,89,45,30], 0.14),"<br>");
+document.writeln(bill([10,80,56,89,45,30], 0.14),"<br>");*/
 
 const billd = (products,tax) => products[i]+products[i]*tax;
-document.writeln(billd([10,80,56,89,45,30],0.14) +"<br>");
+document.writeln("The total amount is " +billd([10,80,56,89,45,30],0.14) +"<br>");
 
 function power(x,n)
 {
@@ -80,6 +80,9 @@ function Countdown(value){
 document.writeln("Count down " + "<br>");
 document.writeln(Countdown(10) + "<br>");
 
-const Counta =(value)=>value<=0 ?1:document.writeln(value+"<br>");
-document.writeln(Counta("Count down "+ "<br>"));
-document.writeln(Counta(10)+ "<br>");
+
+
+const Countdown1=(value) =>value > 0 ? document.writeln(value+' ' +Countdown1(value-1) +"<br>") :value;
+   
+document.writeln("Count down " + "<br>");
+document.writeln(Countdown1(10) + "<br>");
